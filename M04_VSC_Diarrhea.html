@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Open+Sans+SemiCondensed:wght@300;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="M04_VSC_Diarrhea.css" rel="stylesheet"/>
+    <title>Visual Synthesis Challenge - Acute vs Chronic Diarrhea</title>
+    <!-- Include mxGraph -->
+    <script type="text/javascript">
+        mxBasePath = 'https://unpkg.com/mxgraph@4.2.2/javascript/src/';
+    </script>
+    <script src="https://unpkg.com/mxgraph@4.2.2/javascript/mxClient.min.js" type="text/javascript"></script>
+    <script defer="True" src="M04_VSC_Diarrhea.js"></script>
+</head>
+<body>
+    <!-- SIDEBAR TRIGGER BUTTON -->
+    <button class="sidebar-trigger" data-role="sidebar-trigger" id="sidebarTrigger">
+        <span class="material-symbols-outlined icon-ajustado">lightbulb_2</span>
+    </button>
+    
+    <!-- COLLAPSIBLE SIDEBAR -->
+    <div class="sidebar" data-role="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Clinical Decision Making</h3>
+            <p>Acute vs Chronic Diarrhea Management</p>
+        </div>
+        <div class="sidebar-content">
+            <!-- RED FLAGS SECTION -->
+            <div class="sidebar-section">
+                <h4>Red Flags Overview</h4>
+                <ul class="sidebar-list">
+                    <li><strong>Severe dehydration:</strong> Requires immediate intervention</li>
+                    <li><strong>Haemorrhagic diarrhea:</strong> Suggests severe enteritis</li>
+                    <li><strong>Severe lethargy:</strong> Systemic compromise indicator</li>
+                    <li><strong>Persistent vomiting:</strong> Risk of rapid deterioration</li>
+                    <li><strong>Abdominal pain:</strong> May indicate surgical emergency</li>
+                </ul>
+            </div>
+            
+            <!-- ACUTE DIARRHEA SECTION -->
+            <div class="sidebar-section">
+                <h4>Acute Diarrhea (&lt;3 weeks)</h4>
+                <ul class="sidebar-list">
+                    <li><strong>Most common:</strong> Self-limiting dietary indiscretion</li>
+                    <li><strong>No red flags:</strong> Minimal diagnostics + supportive care</li>
+                    <li><strong>With red flags:</strong> Escalate diagnostics immediately</li>
+                    <li><strong>No improvement:</strong> Transition to chronic approach</li>
+                </ul>
+            </div>
+            
+            <!-- CHRONIC DIARRHEA SECTION -->
+            <div class="sidebar-section">
+                <h4>Chronic Diarrhea (≥3 weeks)</h4>
+                <ul class="sidebar-list">
+                    <li><strong>Food-responsive:</strong> Diet trial as first step</li>
+                    <li><strong>Non-responsive:</strong> Advanced GI panel required</li>
+                    <li><strong>Classification:</strong> ARE/IRE/NRE/neoplasia</li>
+                    <li><strong>Long-term:</strong> Ongoing monitoring essential</li>
+                </ul>
+            </div>
+            
+            <!-- ANTIMICROBIAL STEWARDSHIP SECTION -->
+            <div class="sidebar-section">
+                <h4>Antimicrobial Stewardship</h4>
+                <ul class="sidebar-list">
+                    <li><strong>Key principle:</strong> Avoid routine antibiotics</li>
+                    <li><strong>Self-limiting:</strong> Most acute cases resolve naturally</li>
+                    <li><strong>Justified use:</strong> Only with documented infection</li>
+                    <li><strong>Resistance risk:</strong> Preserve antimicrobial efficacy</li>
+                </ul>
+            </div>
+            
+            <!-- DIAGNOSTIC APPROACH SECTION -->
+            <div class="sidebar-section">
+                <h4>Diagnostic Hierarchy</h4>
+                <ul class="sidebar-list">
+                    <li><strong>Minimal (acute):</strong> PCV/TS + fecal float ± Giardia</li>
+                    <li><strong>Escalated (red flags):</strong> CBC/biochem ± imaging</li>
+                    <li><strong>Stepwise (chronic):</strong> Diet trial before advanced tests</li>
+                    <li><strong>Advanced (chronic):</strong> GI panel + endoscopy/biopsy</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MAIN CONTENT AREA -->
+    <div class="main-layout">
+        <div class="container">
+            <div class="header">
+                <h1>Visual Synthesis Challenge</h1>
+                <div class="header-subtitle">Clinical Decision-Making: Acute vs Chronic Diarrhea</div>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab active">
+                    <span class="tab-number">1</span> Activity Overview
+                </button>
+                <button class="tab">
+                    <span class="tab-number">2</span> Create Decision Map
+                </button>
+                <button class="tab">
+                    <span class="tab-number">3</span> Expert Comparison
+                </button>
+            </div>
+            
+            <div class="content">
+                <!-- Tab 1: Activity Overview -->
+                <div class="tab-content active" id="overview-tab">
+                    <h3>Diarrhea Management Decision Map Challenge</h3>
+                    
+                    <div class="activity-summary">
+                        <h4>Objective</h4>
+                        <p>Create a comprehensive clinical decision map that distinguishes between acute and chronic diarrhea presentations, incorporating appropriate diagnostic and therapeutic pathways based on duration, red flags, and response to initial management.</p>
+                    </div>
+                    
+                    <div class="case-grid">
+                        <div class="info-card">
+                            <h4>Acute Diarrhea Management</h4>
+                            <ul class="info-list">
+                                <li><strong>Duration:</strong> Less than 3 weeks</li>
+                                <li><strong>Common cause:</strong> Self-limiting dietary indiscretion</li>
+                                <li><strong>Initial approach:</strong> Minimal diagnostics unless red flags</li>
+                                <li><strong>Treatment:</strong> Supportive care + monitoring (no routine antibiotics)</li>
+                                <li><strong>Key decision:</strong> Improvement within 3-5 days?</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h4>Chronic Diarrhea Management</h4>
+                            <ul class="info-list">
+                                <li><strong>Duration:</strong> 3 weeks or longer</li>
+                                <li><strong>Approach:</strong> Stepwise diagnostic strategy</li>
+                                <li><strong>First step:</strong> Diet trial (food-responsive enteropathy)</li>
+                                <li><strong>If no response:</strong> Advanced GI panel + imaging</li>
+                                <li><strong>Classification:</strong> ARE/IRE/NRE or neoplasia</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="case-presentation">
+                        <h4>Clinical Scenario</h4>
+                        <p><strong>Signalment:</strong> 5-year-old male neutered Labrador Retriever</p>
+                        <p><strong>Presenting complaint:</strong> Owner reports diarrhea</p>
+                        <p><strong>Your task:</strong> Map out the complete clinical decision-making process, from initial presentation through to diagnosis and management, considering both acute and chronic pathways.</p>
+                    </div>
+                    
+                    <div class="requirements">
+                        <h4>Decision Map Requirements</h4>
+                        <div id="task-description">
+                            <p>Your decision map should include:</p>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>Initial patient presentation and history-taking</li>
+                                <li>Critical decision point: Duration assessment (acute vs chronic)</li>
+                                <li>Red flag evaluation for both pathways</li>
+                                <li>Appropriate diagnostic approaches based on pathway</li>
+                                <li>Treatment protocols aligned with antimicrobial stewardship</li>
+                                <li>Decision points for escalation or de-escalation</li>
+                                <li>Final diagnostic classifications and long-term management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="action-section">
+                        <button class="btn primary" data-action="nextTab">
+                            Start Creating Decision Map
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Tab 2: Create Decision Map -->
+                <div class="tab-content" id="diagram-tab">
+                    <h3>Build Your Clinical Decision Map</h3>
+                    <p>Use the diagram editor to create your clinical decision-making pathway for diarrhea management.</p>
+                    
+                    <!-- Toolbar -->
+                    <div class="toolbar">
+                        <div class="toolbar-section">
+                            <h5>Diagram Tools</h5>
+                            <button class="btn icon" data-action="resetTemplate" title="Load template">
+                                <span class="material-symbols-outlined">restart_alt</span> Template
+                            </button>
+                            <button class="btn icon" data-action="clearDiagram" title="Clear all">
+                                <span class="material-symbols-outlined">delete_sweep</span> Clear
+                            </button>
+                            <button class="btn icon" data-action="zoomIn" title="Zoom in">
+                                <span class="material-symbols-outlined">zoom_in</span>
+                            </button>
+                            <button class="btn icon" data-action="zoomOut" title="Zoom out">
+                                <span class="material-symbols-outlined">zoom_out</span>
+                            </button>
+                            <button class="btn icon" data-action="fitWindow" title="Fit to window">
+                                <span class="material-symbols-outlined">fit_screen</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Add Elements Palette -->
+                    <div class="node-palette">
+                        <h5>Add Elements</h5>
+                        <div class="palette-grid">
+                            <button class="palette-btn presentation-node" data-add-node="presentation">
+                                <span class="material-symbols-outlined">local_hospital</span>
+                                Presentation
+                            </button>
+                            <button class="palette-btn decision-node" data-add-node="decision">
+                                <span class="material-symbols-outlined">decision</span>
+                                Decision Point
+                            </button>
+                            <button class="palette-btn pathway-node" data-add-node="pathway">
+                                <span class="material-symbols-outlined">fork_right</span>
+                                Pathway
+                            </button>
+                            <button class="palette-btn diagnostic-node" data-add-node="diagnostic">
+                                <span class="material-symbols-outlined">science</span>
+                                Diagnostic
+                            </button>
+                            <button class="palette-btn treatment-node" data-add-node="treatment">
+                                <span class="material-symbols-outlined">medication</span>
+                                Treatment
+                            </button>
+                            <button class="palette-btn outcome-node" data-add-node="outcome">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                Outcome
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- mxGraph Container -->
+                    <div class="editor-container">
+                        <div id="mxgraph-container" data-role="mxgraph-container" class="graph-container"></div>
+                    </div>
+                    
+                    <!-- Instructions -->
+                    <div class="instructions-panel">
+                        <h4>Editor Instructions</h4>
+                        
+                        <!-- Desktop Instructions -->
+                        <div class="instructions-desktop">
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li><strong>Adding Elements:</strong> Click buttons in the palette above to add elements to your diagram</li>
+                                <li><strong>Moving Elements:</strong> Click and drag elements to position them</li>
+                                <li><strong>Creating Connections:</strong> Press and hold on one shape, then drag to another shape to create a link</li>
+                                <li><strong>Editing Text:</strong> Double-click any element to edit its text. Press Enter to confirm</li>
+                                <li><strong>Selecting and Deleting:</strong> Click to select, then press Delete or use toolbar button</li>
+                                <li><strong>Template:</strong> Use Reset Template to load the starter structure</li>
+                                <li><strong>Navigation:</strong> Hold spacebar + drag to pan around the diagram</li>
+                                <li><strong>Zoom:</strong> Use Ctrl+scroll wheel or toolbar buttons</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Touch/Tablet Instructions -->
+                        <div class="instructions-touch">
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li><strong>Adding Elements:</strong> Tap palette buttons to add shapes</li>
+                                <li><strong>Creating Connections:</strong> Press and hold on one shape, drag to another</li>
+                                <li><strong>Editing Text:</strong> Double-tap to edit text</li>
+                                <li><strong>Deleting:</strong> Tap to select, then use Delete button in toolbar</li>
+                                <li><strong>Navigation:</strong> Touch and drag to move around the diagram</li>
+                                <li><strong>Zoom:</strong> Pinch-to-zoom or double-tap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab 3: Expert Comparison -->
+                <div class="tab-content">
+                    <h3>Expert Comparison & Analysis</h3>
+                    <p>Compare your diarrhea management decision map with the expert reference approach.</p>
+                    
+                    <div style="text-align: center; margin: 20px 0;">
+                        <button class="btn primary" data-action="showComparison" id="compareBtn">
+                            Show Expert Comparison
+                        </button>
+                    </div>
+                    
+                    <div class="comparison-section" data-role="comparison-panel" id="comparison">
+                        <!-- Visual comparison -->
+                        <div class="visual-comparison">
+                            <h5>Visual Comparison: Your Decision Map vs Expert Reference</h5>
+                            <div class="comparison-grid">
+                                <div class="diagram-container student-diagram">
+                                    <h6>Your Decision Map</h6>
+                                    <div data-role="student-diagram" id="studentDiagramContainer"></div>
+                                </div>
+                                <div class="diagram-container expert-diagram">
+                                    <h6>Expert Reference Map</h6>
+                                    <div data-role="expert-diagram" id="expertDiagramContainer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="explanation-box">
+                            <h5>Expert Reference Explanation</h5>
+                            <div id="expertExplanation">
+                                <p><strong>Duration as Primary Discriminator:</strong> The expert reference establishes duration of clinical signs (< 3 weeks vs ≥ 3 weeks) as the fundamental branching point, recognising that acute and chronic diarrhea require fundamentally different diagnostic and therapeutic approaches.</p>
+                                
+                                <p><strong>Red Flag Assessment:</strong> Both pathways incorporate red flag evaluation as the secondary decision point. The presence of red flags (severe dehydration, haemorrhagic diarrhea, severe lethargy, persistent vomiting, or significant abdominal pain) mandates immediate diagnostic escalation regardless of duration.</p>
+                                
+                                <p><strong>Antimicrobial Stewardship:</strong> The acute pathway explicitly avoids routine antibiotic use, implementing supportive care and monitoring for uncomplicated cases. Antibiotics are reserved only for documented bacterial infections, reflecting evidence-based stewardship principles.</p>
+                                
+                                <p><strong>Stepwise Chronic Management:</strong> The chronic pathway begins conservatively with diet trials for food-responsive enteropathy before escalating to advanced diagnostics. This cost-effective approach recognises that many chronic cases resolve with dietary modification alone.</p>
+                                
+                                <p><strong>Re-evaluation Loops:</strong> The map includes critical decision points for escalation when initial management fails. Acute cases not improving within 3-5 days are directed to the escalated diagnostic pathway, whilst chronic cases not responding to diet trials progress to advanced GI panel and histopathology.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="learning-points">
+                            <h5>Key Learning Points</h5>
+                            <div id="learningPoints">
+                                <ul style="margin: 10px 0; padding-left: 20px;">
+                                    <li><strong>Duration Matters:</strong> The 3-week threshold separates self-limiting from persistent disease requiring different strategies</li>
+                                    <li><strong>Red Flags Override:</strong> Severe clinical signs mandate immediate diagnostic escalation regardless of duration</li>
+                                    <li><strong>Minimal-to-Maximal Diagnostics:</strong> Start with minimal database for uncomplicated acute cases; escalate based on response</li>
+                                    <li><strong>Antibiotic Stewardship:</strong> Avoid routine antibiotics in self-limiting acute diarrhea to preserve antimicrobial efficacy</li>
+                                    <li><strong>Diet Trial Priority:</strong> For chronic cases without red flags, diet trial precedes expensive advanced diagnostics</li>
+                                    <li><strong>Classification Framework:</strong> Chronic enteropathies classified as ARE (antibiotic-responsive), IRE (immunosuppressant-responsive), NRE (non-responsive), or neoplasia</li>
+                                    <li><strong>Rule Out Neoplasia:</strong> Always exclude neoplasia before committing to long-term immunosuppression</li>
+                                    <li><strong>Dynamic Re-assessment:</strong> Regular monitoring with clear criteria for escalation or pathway switching</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div data-role="download-section" id="download-section" style="display: none;">
+                            <button class="btn primary" data-action="downloadMyDiagram" style="margin: 5px;">
+                                Download My Decision Map
+                            </button>
+                            <button class="btn success" data-action="downloadExpertDiagram" style="margin: 5px;">
+                                Download Expert Reference Map
+                            </button>
+                            <p style="font-size: 12px; color: #666; margin-top: 10px;">
+                                Your decision map • Expert reference includes detailed annotations
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div data-role="messages" id="messages">
+                        <div class="message info">
+                            <strong>Ready!</strong> Create your diarrhea management decision map in the editor, then click "Show Expert Comparison" to see how it compares to the reference approach.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
